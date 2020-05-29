@@ -11,11 +11,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.1",
+    "@babel/preset-env": "^7.10.1",
     "babel": "^6.23.0",
     "knex": "^0.21.1",
-    "mysql2": "^2.1.0"
+    "mysql2": "^2.1.0",
+    "nodemon": "^2.0.4",
+    "rimraf": "^3.0.2"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0"
+  },
+  "babel": {
+    "presets": ["@babel/preset-env"]
   }
 }
