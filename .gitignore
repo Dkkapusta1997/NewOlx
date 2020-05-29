@@ -1,3 +1,4 @@
 .idea/
 dist
 src/db/connection.js
+node_modules
