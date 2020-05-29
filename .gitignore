@@ -1,2 +1,5 @@
 .idea/
 package.json
+package-lock.json
+dist
+sr/db/connection.js
