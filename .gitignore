@@ -1,3 +1,3 @@
 .idea/
 dist
-sr/db/connection.js
+src/db/connection.js
