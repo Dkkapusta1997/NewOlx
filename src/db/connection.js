@@ -7,3 +7,4 @@ export const connectionConfig = {
         database: 'jIJ11IMxcb'
     }
 };
+
