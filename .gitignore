@@ -1,4 +1,8 @@
 .idea/
 dist
+<<<<<<< HEAD
 src/db/connection.js
 node_modules
+=======
+node_modules
+>>>>>>> 8523c198aff25ccae1be420a78740f9908694a8e
