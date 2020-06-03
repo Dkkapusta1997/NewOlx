@@ -1,14 +1,11 @@
-import {GetIdAccounts} from "./db/dataService/accountService"
-import {GetIdLink} from "./db/dataService/searchService"
+import {createUserSearchs} from "./service/userSearch"
 import "regenerator-runtime/runtime.js";
-import {CreateUserSearch} from "./service/createUserSearch";
+import _ from 'lodash'
+import {startSearching} from "./parser/parser";
 
-GetIdAccounts().then((data)=>{
-    for(const account of data){
-        GetIdLink(account.id).then((links)=>{
-           for(const link of links){
-               CreateUserSearch(account.id,link.id);
-           }
-        })
-    }
-});
+createUserSearchs().then((linksWithProducts)=>{
+    _.forEach(linksWithProducts,function(value,key){
+        startSearching(linksWithProducts[key]);
+    })
+})
+
