@@ -18,12 +18,15 @@
     "knex": "^0.21.1",
     "mysql2": "^2.1.0",
     "nodemon": "^2.0.4",
+    "regenerator-runtime": "^0.13.5",
     "rimraf": "^3.0.2"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0"
   },
   "babel": {
-    "presets": ["@babel/preset-env"]
+    "presets": [
+      "@babel/preset-env"
+    ]
   }
 }
