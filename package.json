@@ -15,10 +15,12 @@
     "@babel/core": "^7.10.1",
     "@babel/preset-env": "^7.10.1",
     "babel": "^6.23.0",
+    "cheerio": "^1.0.0-rc.3",
     "knex": "^0.21.1",
     "lodash": "^4.17.15",
     "mysql2": "^2.1.0",
     "nodemon": "^2.0.4",
+    "puppeteer": "^3.3.0",
     "regenerator-runtime": "^0.13.5",
     "rimraf": "^3.0.2"
   },

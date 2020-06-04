@@ -1,12 +1,13 @@
-import {createUserSearchs} from "./service/userSearch"
+import {createUsersSearchs} from "./service/userService"
+import {startSearching} from "./service/userService"
 import "regenerator-runtime/runtime.js";
 import _ from 'lodash'
-import {startSearching} from "./parser/parser";
 
-createUserSearchs().then((linksWithProducts)=>{
-    _.forEach(linksWithProducts,function(value,key){
-        let pageQuantity=Object.keys(_.groupBy(linksWithProducts[key],'pageQuantity'));
-        startSearching(linksWithProducts[key],key,pageQuantity);
+
+createUsersSearchs().then((Products)=>{
+    //Product are groupBy of links where we will look for their
+    _.forEach(Products,function(value,linkToPage){
+        startSearching(Products[linkToPage],linkToPage);
     })
 })
 
