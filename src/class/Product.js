@@ -1,4 +1,5 @@
 export class Product{
+
     constructor(id,name,priceMin,priceMax,priceGood,idSearch) {
         this.id=id;
         this.name=name;
@@ -7,4 +8,5 @@ export class Product{
         this.priceGood=priceGood;
         this.idSearch=idSearch;
     }
+
 }

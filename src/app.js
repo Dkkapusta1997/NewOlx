@@ -1,5 +1,5 @@
-import {createUsersSearchs} from "./service/userService"
-import {startSearching} from "./service/userService"
+import {createUsersSearchs} from "./service/mainQueryService"
+import {startSearching} from "./service/searcheService"
 import "regenerator-runtime/runtime.js";
 import _ from 'lodash'
 

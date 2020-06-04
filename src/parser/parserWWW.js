@@ -15,5 +15,4 @@ export async function parserWWW(websiteContent){
         });
 
 return offertArray;
-
 }
