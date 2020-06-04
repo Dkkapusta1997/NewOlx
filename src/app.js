@@ -5,7 +5,8 @@ import {startSearching} from "./parser/parser";
 
 createUserSearchs().then((linksWithProducts)=>{
     _.forEach(linksWithProducts,function(value,key){
-        startSearching(linksWithProducts[key]);
+        let pageQuantity=Object.keys(_.groupBy(linksWithProducts[key],'pageQuantity'));
+        startSearching(linksWithProducts[key],key,pageQuantity);
     })
 })
 
