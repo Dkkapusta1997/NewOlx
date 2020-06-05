@@ -2,11 +2,10 @@ import {saveOffer,existOffer} from "./foundService"
 
 export async function compareOffersWithProduct(offerts,searchInformation){
     for(const offer of offerts){
-        for(const product of searchInformation.product){
 
+        for(const product of searchInformation.product){
                 let offerName=toThisSameStyle(offer.title)
                 let productName=toThisSameStyle(product.name)
-
                 if(offerName.search(productName)!=-1){
                     switch(isGoodOffer(offer,product)){
                         case 'GreatOffer':

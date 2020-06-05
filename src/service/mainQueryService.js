@@ -13,25 +13,30 @@ export function createSearchInformation(resultDB){
     const productFromDb=parsProductFromDB(resultDB);
     const idAccount=parsIdAccount(resultDB);
     const idSearch=parsIdSearch(resultDB);
+    const email=parsEmail(resultDB);
 
     const searchInformationObject={
         idAccount:idAccount,
         idSearch:idSearch,
         pageQuantity:pageQuantity,
-        product:productFromDb
+        product:productFromDb,
+        email:email
     }
     return searchInformationObject;
 }
 
+
 function parsProductFromDB(resultDB){
 
     let productArray=new Array();
-
     resultDB.forEach(e=>{
-        productArray.push(new Product(e.id,e.name,e.priceMin,e.priceMax,e.priceGood,e.idSearch))
+        productArray.push(new Product(e.idProduct,e.name,e.priceMin,e.priceMax,e.priceGood,e.idSearch))
     })
-
     return productArray;
+}
+
+function parsEmail(resultDB){
+    return  Object.keys(_.groupBy(resultDB,'email'))[0];
 }
 
 function createPageQuantityFromResultDB(resultDB){
