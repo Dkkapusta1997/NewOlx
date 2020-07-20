@@ -17,7 +17,7 @@
     "babel": "^6.23.0",
     "cheerio": "^1.0.0-rc.3",
     "knex": "^0.21.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "mysql2": "^2.1.0",
     "nodemailer": "^6.4.8",
     "nodemailer-smtp-transport": "^2.7.4",
